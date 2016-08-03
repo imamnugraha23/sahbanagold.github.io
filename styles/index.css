@@ -11,17 +11,43 @@ height: 150px;
 .footer{
 bottom: 10px;
 }
+h1{
+	text-align: center;
+}
+h1 span{
+	background-color: rgba(255,120,30,0.6); 
+}
 h3{
 	color: #ffb000;
 }
+p{
+	padding: 15px;
+}
 #bio-paragraph{
-	align: justify;
+	text-align: justify;
 	text-indent: 50px;
+	padding: 20px;
+	line-height: 35px;
+	font-weight: 1200;
 }
 
 .half{
 	width: 45%;
 	display: inline-block;
+	padding: 10px;
+	border-radius: 10px;
+
+}
+#mybio{
+	background-color: lime;
+	margin: 12px;
+	padding: 12px;
+	top:10px; 
+}
+#mypict{
+	background-color: black;
+
+
 }
 #nama{
 	background-color: #2db34a;
@@ -31,6 +57,35 @@ h3{
 }
 #tgl-lahir{
 	background-color: #0087cc;
+}
+
+#video-frame{
+	margin: 0 auto 0;
+
+}
+.col3{
+	width: 30%;
+	padding: 5px;
+	display: inline-block;
+}
+.col3 div{
+	width: 350px;
+	padding: 5px;
+	font-style: bold;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+#if1{
+	background-color: #2db34a;
+
+}
+#if2{
+	background-color: #ff7b29;
+	
+}
+#if3{
+	background-color: #0087cc;
+	
 }
 a img{
 	float: right;
