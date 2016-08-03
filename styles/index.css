@@ -1,0 +1,51 @@
+*{
+font-family: 'Droid Serif', serif;
+}
+
+.header{
+height: 150px;
+}
+.main-content{
+
+}
+.footer{
+bottom: 10px;
+}
+h3{
+	color: #ffb000;
+}
+#bio-paragraph{
+	align: justify;
+	text-indent: 50px;
+}
+
+.half{
+	width: 45%;
+	display: inline-block;
+}
+#nama{
+	background-color: #2db34a;
+}
+#tempat-lahir{
+	background-color: #ff7b29;
+}
+#tgl-lahir{
+	background-color: #0087cc;
+}
+a img{
+	float: right;
+}
+ul li{
+	text-align: center;
+	list-style-type: none;
+	display: inline-block;
+}
+.contact{
+	width: 50px;
+	height: 50px;	
+
+}
+#phone{
+	top: -25px;
+}
+

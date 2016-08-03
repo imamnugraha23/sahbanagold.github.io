@@ -1,17 +1,114 @@
 <!doctype HTML>
 <html>
 <head>
+<meta charset="utf-8">
+<meta name="description" content="Hacktiv8 Tesla Generation Course Material">
+<meta name="keyword" content="HTML,HTML5,CSS,CSS3,Javascript">
+<meta name="author" content="Sahbana">
+<link rel="stylesheet" type="text/css" href="styles/index.css" >
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 <title> We're the Tesla</title>
 </head>
 <body>
+<!--this is header -->
+<div class="header">
+	<div style="width:100%; height: 100px; scale:0.1;background: url('images/motif-background.jpg') repeat;"></div>
+
+</div>
+
+<!--this is main content -->
+<div class="main-content">
+
+	
   <h1>Hey World, the <span>Tesla<span> says "Hello!!!"</h1>
   <p>We name ourself "the Tesla Generation of Hacktiv8". The Tesla is Batch 1 student at <a href="https://hacktiv8.com/">hacktiv8.com</a> bootcamp for fullstack JavaScript Developer.</p>
-  <div id="findme">
-    <span>Find Me at :</span>
-    <div id="mypict">
+
+  <h4>salam kenal semuanya..</h4> 
+
+  <div id="bio-div">
+  <div class="half">
       <a href="https://www.facebook.com/sahbana.lubis"><img src="images/sahbana.jpg" style="height:100px; width:100px; border-radius:50%;"></a>
-    </div>
-    <h2>SAHBANA</h2>
   </div>
+  <div class="half">
+  	<form>
+  		<fieldset>
+  			<label>Nama</label>
+  			<span id="nama">Sahbana</span><br>
+  			<label >Tempat Lahir</label>
+  			<span id="tempat-lahir">Rao - Rao</span><br>
+  			<label for="tgl-lahir">Tanggal Lahir</label>
+  			<span id="tgl-lahir">02-04-1989</span><br>
+  		</fieldset>
+  	</form>
+  </div>
+  </div>
+
+  <p id="bio-paragraph">kemarin ketika briefing mungkin sudah pada kenal sebagian, tapi ada yang belum. Jadi perkenalkan lagi, nama saya "Sahbana", untuk kedepannya boleh panggil "bana". Dasar ingin masuk Hacktiv8 yang pertama adalah menjadi developer professional yang merupakan impian sejak zaman sekolah dulu, tujuan lainnya adalah menjadi pioner developer web dari daerah asal saya "tanah sawit" (bisa dilihat di google-map pasaman barat itu hijau semua oleh sawit, hehhehe. teknologi belum menjangkau bahkan sebagian besar daerah kami) dan akan kembali beberapa tahun kemudian untuk menyebarkan ilmu jika nasib memberikan jalannya.</p>
+
+
+
+
+  <h3>Below some video's were so inspiring for us:</h3>
+  <div id="video-frame">
+  	<iframe height="250" width="360" src="https://www.youtube.com/embed/7bB_fVDlvhc" frameborder="0" allowfullscreen></iframe>
+  	<iframe height="250" width="360" src="https://www.youtube.com/embed/UF8uR6Z6KLc" frameborder="0" allowfullscreen></iframe>
+  	<iframe height="250" width="360" src="https://www.youtube.com/embed/lCN6FjqDcHg" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+  <p>
+  Send your Comment Here :
+  <form>
+  		<fieldset>
+  			<label for="nama">Nama</label>
+  			<input type="text" name="nama" placeholder="Sahbana">
+  			<label for="tempat-lahir">Tempat Lahir</label>
+  			<input type="text" name="tempat-lahir" placeholder="Rao-Rao">
+  			<label for="tgl-lahir">Tanggal Lahir</label>
+  			<input type="date" name="tgl-lahir" placeholder="1989-04-02">
+  			<label for="bahasa">Bahasa Pilihan</label>
+  			<select> name="bahasa">
+  				<option>Javascript</option>
+  				<option>Phyton</option>
+  				<option>Ruby</option>
+  				<option>Perl</option>
+  				<option>C++</option>
+  				<option>C#</option>
+  				<option>C</option>
+  			</select><br>
+  			<textarea rows="10" cols="130"></textarea><br>
+  			<button onclick="alert('Thanks!! You have a try, but this page is static. JavaScript didnot added yet.')">Send</button>
+
+  		</fieldset>
+  	</form>	
+  </p>
+
+
+
+  
+    <span>Find Me at :</span>
+    
+  
+  
+</div>
+
+
+<!--this is footer -->
+<div class="footer">
+	<ul>
+		<li>
+		<img class="contact" src="images/purple-phone.png">&nbsp;&nbsp; 
+		<span id="phone">: 0812-6649-0034</span>
+		</li>&nbsp;&nbsp;
+		<li>
+		<a href=""><img class="contact" src="images/gmail.png"></a>
+		</li>&nbsp;&nbsp;
+		<li>
+		<a href="https://www.facebook.com/sahbana.lubis"><img class="contact" src="images/facebook.png"></a>
+		</li>
+		
+	</ul>
+
+</div>
+
 </body>
 </html>
