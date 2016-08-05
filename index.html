@@ -10,9 +10,24 @@
 <title> We're the Tesla</title>
 </head>
 <body>
+<div style="width:100%; height: 100px; scale:0.1;background: url('images/motif-background.jpg') repeat;"></div>
 <!--this is header -->
 <div class="header">
-	<div style="width:100%; height: 100px; scale:0.1;background: url('images/motif-background.jpg') repeat;"></div>
+<div class="half">
+	
+</div>	
+<div class="half">
+	<ul>
+		<li><a href="news/first-news.html">News</a></li>
+		<li><a href="blog/first-news.html">Blog</a></li>
+		<li><a href="">Gallery</a></li>
+		<li><a href="">About</a></li>
+    <a href="https://sahbanagold.github.io">
+      <img width="50px" height="50px" src="images/blue-home.png">
+    </a>
+		
+	</ul>
+</div>	
 
 </div>
 
@@ -20,7 +35,7 @@
 <div class="main-content">
 
 	
-  <h1>Hey World, the <span>Tesla<span> says "Hello!!!"</h1>
+  <h1>Hey World, the <span>Tesla</span> says "Hello!!!"</h1>
   <p>We name ourself "the Tesla Generation of Hacktiv8". The Tesla is Batch 1 student at <a href="https://hacktiv8.com/">hacktiv8.com</a> bootcamp for fullstack JavaScript Developer.</p>
 
   <h4>salam kenal semuanya..</h4> 
@@ -43,10 +58,11 @@
   </div>
   </div>
 
-  <p id="bio-paragraph">kemarin ketika briefing mungkin sudah pada kenal sebagian, tapi ada yang belum. Jadi perkenalkan lagi, nama saya "Sahbana", untuk kedepannya boleh panggil "bana". Dasar ingin masuk Hacktiv8 yang pertama adalah menjadi developer professional yang merupakan impian sejak zaman sekolah dulu, tujuan lainnya adalah menjadi pioner developer web dari daerah asal saya "tanah sawit" (bisa dilihat di google-map pasaman barat itu hijau semua oleh sawit, hehhehe. teknologi belum menjangkau bahkan sebagian besar daerah kami) dan akan kembali beberapa tahun kemudian untuk menyebarkan ilmu jika nasib memberikan jalannya.</p>
+  <p class="paragraph">kemarin ketika briefing mungkin sudah pada kenal sebagian, tapi ada yang belum. Jadi perkenalkan lagi, nama saya "Sahbana", untuk kedepannya boleh panggil "bana". Dasar ingin masuk Hacktiv8 yang pertama adalah menjadi developer professional yang merupakan impian sejak zaman sekolah dulu, tujuan lainnya adalah menjadi pioner developer web dari daerah asal saya "tanah sawit" (bisa dilihat di google-map pasaman barat itu hijau semua oleh sawit, hehhehe. teknologi belum menjangkau bahkan sebagian besar daerah kami) dan akan kembali beberapa tahun kemudian untuk menyebarkan ilmu jika nasib memberikan jalannya.</p>
 
-  
-  <h3>Below some video's were so inspiring for us:</h3>	
+  <div id="iframe-head">
+  <h3><span>Below some video's were so inspiring for us:</span></h3>	
+  </div>
   
   <div id="video-frame">
   <div class="col3">
@@ -84,20 +100,15 @@
   				<option>C#</option>
   				<option>C</option>
   			</select><br>
+  			<label for="email">E-mail</label>
+  			<input type="email" name="email" placeholder="sahbanalo@gmail.com">
   			<textarea rows="10" cols="130"></textarea><br>
   			<button onclick="alert('Thanks!! You have a try, but this page is static. JavaScript didnot added yet.')">Send</button>
 
   		</fieldset>
   	</form>	
-  </p>
-
-
-
-  
-    <span>Find Me at :</span>
     
-  
-  
+    <span>Find Me at :</span>
 </div>
 
 
@@ -105,8 +116,8 @@
 <div class="footer">
 	<ul>
 		<li>
-		<img class="contact" src="images/purple-phone.png">&nbsp;&nbsp; 
-		<span id="phone">: 0812-6649-0034</span>
+		<img id="phone-img" class="contact" src="images/purple-phone.png">&nbsp;&nbsp; 
+		<div id="phone">: 0812-6649-0034</div>
 		</li>&nbsp;&nbsp;
 		<li>
 		<a href="mailto:sahbanalo@gmail.com"><img class="contact" src="images/gmail.png"></a>
