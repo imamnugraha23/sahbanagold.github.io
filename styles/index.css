@@ -191,8 +191,21 @@ tbody tr:nth-child(odd){
     background: #e9a264;
 }
 
+#table2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.heading th,.heading td{
+    background: #64dd17;
+}
 
-
+#table2 tr:nth-child(even):not(.heading){
+    background: #76ff03;
+}
+#table2 tr:nth-child(odd):not(.heading){
+    background: #b2ff59;
+}
 .contact {
     width: 50px;
     height: 50px;
