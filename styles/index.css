@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .header {
@@ -85,6 +86,9 @@ label,input,textarea,button {
     padding: 10px;
     border-radius: 10px;
 }
+.half .paragraph{
+    
+}
 .half ul{
     margin: 0;
 }
@@ -165,8 +169,27 @@ nav ul li {
 a img {
     float: right;
 }
+table{
+    font-size: 20px
+}
+thead{
+    width: 500px;
+    background: #f70;    
+}
+td{
+    padding: 20px;
 
+}
+td img{
+    margin-top: 10px;
+}
 
+tbody tr:nth-child(even){
+    background: #ffc600;
+}
+tbody tr:nth-child(odd){
+    background: #e9a264;
+}
 
 
 
