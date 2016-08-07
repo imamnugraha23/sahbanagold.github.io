@@ -57,14 +57,15 @@ label,input,textarea,button {
     margin: 10px auto 5px;
 }
 
-.paragraph {
+.paragraph, ol li {
     font-size: 18px;
-    text-align: justify;
-    text-indent: 50px;
+    text-align: justify;    
     padding: 20px;
     line-height: 2em;
 }
-
+.paragraph{
+text-indent: 50px;
+}
 #artikel {
     background: rgba(255,0,200,0.6);
     text-align: center;
