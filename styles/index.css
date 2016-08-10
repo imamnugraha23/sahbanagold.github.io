@@ -242,6 +242,8 @@ tbody tr:nth-child(odd){
 }
 .blog-art h3{
     background: yellow;
+    padding: 30px;
+    text-align: center;
     padding: 10px 5px 5px;
 }
 
