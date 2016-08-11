@@ -250,3 +250,47 @@ tbody tr:nth-child(odd){
     
     height: 300px;
 }
+#game-div,#score-div, #computer-div, #player-div,#arena{
+    width: 90%;
+    margin: 10px auto 5px;
+    text-align: center;
+    border: 2px solid #f00;
+}
+#arena{
+    height: 310px;
+}
+#score-div{
+    height: 100px;
+}
+.computerRSP,.playerRSP,#computer-choose,#player-choose{
+    border: 1px solid #f37;
+    border-radius: 5px;
+    margin: 5px;
+}
+#computer-choose,#player-choose,#arena-text{
+    visibility: hidden;
+}
+.computerRSP, #computer-choose{
+    transform: rotate(180deg);
+}
+#computer,#playerName,#scores{
+    width: 250px;
+    height: 50px;
+    float: left;
+    position: absolute;
+    background: yellow;
+}
+.game-text{
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#arena-text{
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: center;
+    color: green;
+}
