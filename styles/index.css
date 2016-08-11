@@ -236,9 +236,7 @@ tbody tr:nth-child(odd){
     margin: 20px;
     border: solid 1px yellow;
     box-shadow: 5px 10px 20px rgba(0,0,0,0.3);
-    display: inline-block;
-    position: relative;
-    top:10px;   
+    
 }
 .blog-art h3{
     background: yellow;
