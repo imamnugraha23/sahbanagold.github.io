@@ -1,11 +1,23 @@
-var playerScore = 0;
-var computerScore = 0;
-var roundCounts = 0;
+var playerScore = 0,
+	computerScore = 0,
+	roundCounts = 0,
+	win = 0,
+	winner = 0;
+var playing = false;
 var computerImganim = null;
 var playerName = "Player Name";
+var rules = [[0,1,-1],[-1,0,1],[1,-1,0]];
 
-var playerImg = [].slice.call(document.querySelectorAll("img.playerRSP"));
-var computerImg = [].slice.call(document.querySelectorAll("img.computerRSP"));
+var nama = document.getElementById('input-nama');			
+var messageDiv = document.getElementById('message-div');
+var playerText = document.getElementById('player-text');
+var computerText = document.getElementById('computer-text');
+var computerChooseImg = document.getElementById('computer-choose'),
+	playerChooseImg = document.getElementById('player-choose');
+
+var playerImg = [].slice.call(document.querySelectorAll("img.playerRSP")),
+	computerImg = [].slice.call(document.querySelectorAll("img.computerRSP"));
+
 playerImg.forEach(function addEvent (playerRSP) {
 	var playerChoose = playerRSP.getAttribute("data");
 	playerRSP.addEventListener("mouseover",function () {
@@ -15,15 +27,18 @@ playerImg.forEach(function addEvent (playerRSP) {
 		playerRSP.style.background = "#fff";
 	});
 	playerRSP.addEventListener("click",function () {		
-		
-		play(playerChoose);
+		if (playing){
+			play(playerChoose);
+		}
 	});
 });
+
 function startShuffle () {
 	computerImganim = setInterval(shuffle,100);
 	
 
 }
+
 function stopShuffle (computerP) {
 	clearInterval(computerImganim);
 	setImgShow(computerP);
@@ -36,8 +51,7 @@ function shuffle () {
 }
 	
 function setImgChoosen(player,computer) {
-	var computerChooseImg = document.getElementById('computer-choose');
-	var playerChooseImg = document.getElementById('player-choose');
+	
 	if (player==0) {
 		playerChooseImg.setAttribute("src","../images/rock.png");
 	}else if(player == 1){
@@ -57,40 +71,70 @@ function setImgChoosen(player,computer) {
 }
 
 function rockscissor(player, computer){
-	var rules = [[0,1,-1],[-1,0,1],[1,-1,0]];
-	var win = rules[player][computer];
+	
+	win = rules[player][computer];
 	var result = [];	
 	var arenaText = document.getElementById('arena-text');
 	setImgChoosen(player,computer);
+
 	
 		if (player == 0) {};
 		if (win == -1){
 			result = [0,1];
 			arenaText.innerHTML = " Computer Menang";
+			computerText.innerHTML += " 1"; 
+			playerText.innerHTML += " 0";
 		}
 		else if (win == 0) {
 			result = [0,0];
 			arenaText.innerHTML = "Permainan Seri";
+			computerText.innerHTML += " 0"; 
+			playerText.innerHTML += " 0";
 		}
 		else if (win == 1) {
 			result = [1,0];
 			arenaText.innerHTML = " Anda Menang";
+			computerText.innerHTML += " 0"; 
+			playerText.innerHTML += " 1";
 			
 		};
-		arenaText.style.visibility = "visible";		
+		arenaText.style.visibility = "visible";
+		roundCounts++;
+		if (roundCounts <=4 ) {
+			setTimeout(function function_name (argument) {
+				arenaText.style.visibility = "hidden";
+				playerChooseImg.style.visibility = "hidden";
+				computerChooseImg.style.visibility = "hidden";
+				startShuffle();
+				playing = true;
+			}, 1500);
+		} else {			
+			gameOver();
+			stopShuffle();
+			messageDiv.style.display = "block";
+			arenaText.style.visibility = "hidden";
+			playerChooseImg.style.visibility = "hidden";
+			computerChooseImg.style.visibility = "hidden";
+			computerText.innerHTML = "Computer"; 
+			playerText.innerHTML = "Player";
+			nama.value = "";
+			playing = false;
+
+
+		}		
 	return result;	
 }
 
 function checkwinner (result) {
-	var winner = result[0] - result[1];
+	winner = result[0] - result[1];
 	if (winner == -1) {
 		playerScore += 0;
-		computerScore += 0;
+		computerScore += 1;
 	} else if (winner == 0) {
 		playerScore += 0;
 		computerScore += 0;
 	} else if (winner == 1){
-		playerScore += 0;
+		playerScore += 1;
 		computerScore += 0;
 	};	
 }
@@ -113,7 +157,7 @@ function setImgShow (show) {
 	};
 	
 }
-function overGame () {
+function gameOver () {
 	playerScore = 0;
 	computerScore = 0;
 	roundCounts = 0;
@@ -121,10 +165,8 @@ function overGame () {
 	return;
 }
 
-function play (playerP) {
-	if (roundCounts >=5) {
-		overGame();
-	};	
+function play (playerP) {	
+	playing = false;
 	var computerP = Math.floor(Math.random()*3);	
 	stopShuffle(computerP);
 	var roundResult = 0;
@@ -132,6 +174,5 @@ function play (playerP) {
 		roundResult = rockscissor(playerP,computerP);
 	};	
 	checkwinner(roundResult);
-	roundCounts++;
+	
 }
-startShuffle();

@@ -10,10 +10,26 @@
 	
 </head>
 <body>
+	<div id="message-div">
+		<h1>Selamat Datang</h1>
+		<p>Permainan ini dinamakan Batu Gunting Kertas. Pemain harus memilih salah satu Batu, Gunting Atau Kertas</p>
+		<p>Batu mengalahkan Gunting</p>
+		<p>Gunting mengalahkan Kertas</p>
+		<p>Kertas mengalahkan Batu</p>
+		<p>Permainan dilakukan sebanyak 5 kali. Pemain yang paling banyak poin adalah pemenangnya.</p>
+		<div class="pertiga"></div>
+		<div class="pertiga">
+		<label for="nama">Game Ini Butuh Nama Untuk Lawan Bermain</label>
+		<input type="text" name="nama" id="input-nama" placeholder="Sahbana">
+		<button onclick="main()">Main</button>
+		</div>
+		<div class="pertiga"></div>
+	</div>
 	<div id="game-div">
 		<div id="computer-div">
-			<div>
-				<div id="computer"><p class="game-text" id="computer-text">Computer</p></div>
+			<div id="computer"><p class="game-text" id="computer-text">Computer</p></div>
+
+			<div id="computer-img-div">				
 				<img class="computerRSP" src="../images/rock.png">
 				<img class="computerRSP" src="../images/scissor.png">
 				<img class="computerRSP" src="../images/paper.png">
@@ -25,8 +41,8 @@
 			<img id="player-choose" src="../images/scissor.png">
 		</div>
 		<div id="player-div">
-			<div>
-				<div id="playerName"><p class="game-text" id="palyer-text">Player Name</p></div>
+			<div id="playerName"><p class="game-text" id="player-text">Player Name</p></div>
+			<div id="player-img-div">				
 				<img class="playerRSP" src="../images/rock.png" data=0>
 				<img class="playerRSP" src="../images/scissor.png" data=1>
 				<img class="playerRSP" src="../images/paper.png" data=2>
@@ -34,5 +50,14 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="../js/rockscissor.js"></script>
+	<script type="text/javascript">
+		function main () {				
+			playerText.innerHTML = nama.value;
+			messageDiv.style.display = "none";
+			playing = true;
+			startShuffle();
+		}
+		
+	</script>
 </body>
 </html>

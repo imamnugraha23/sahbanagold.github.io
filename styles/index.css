@@ -256,6 +256,12 @@ tbody tr:nth-child(odd){
     text-align: center;
     border: 2px solid #f00;
 }
+#computer-img-div,#player-img-div{
+    width: 60%;
+    margin-left: 250px;
+    text-align: center;
+    
+}
 #arena{
     height: 310px;
 }
@@ -279,11 +285,12 @@ tbody tr:nth-child(odd){
     float: left;
     position: absolute;
     background: yellow;
+    display: block;
 }
 .game-text{
     font-size: 30px;
     text-align: center;
-    margin: 0;
+    margin: -10px 0 0;
     padding: 0;
 }
 #arena-text{
@@ -293,4 +300,48 @@ tbody tr:nth-child(odd){
     text-align: center;
     vertical-align: center;
     color: green;
+}
+#message-div{
+    z-index: 10000;
+    margin: 0;
+    position: fixed;    
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+}
+#message-div h1{
+    color: #3377ff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 100px;
+}
+#message-div label,#message-div input{
+    text-align: center;
+    font-size: 30px;
+    color: #ff9980;
+    display: block;
+}
+#message-div button{
+    width: 250px;
+    height: 40px;
+    margin: 10px auto 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    background-color: #00b300;
+    color: #fff;
+}
+#message-div p{
+    font-size: 20px;
+    text-align: center;
+    margin: -10px;
+    padding: 0;
+    color: #fff;
+}
+.pertiga{
+    position: relative;
+    width: 100%;
+    display: inline;
 }
