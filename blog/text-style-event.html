@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="mengubah style dengan event">
+	<meta name="keyword" content="HTML,HTML5,CSS,CSS3,Javascript,Gallery Slide">
+	<meta name="author" content="Sahbana">
+	<link rel="stylesheet" type="text/css" href="../styles/index.css" >
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<title> Mengubah Style Text</title>
+</head>
+<body>
+	<h1>Membuat Efek Italic dan Bold dengan EventListener</h1>
+	<center>
+		<span class="rainbow">
+			<span>"</span>lakukan <span>klik</span> dan <span>klik kanan</span> untuk memberikan efek.<span>"</span>
+		</span>
+	</center>
+	<div id="main-content">
+		<div class="tstyle">	
+			<div class="col3">
+				<ul>
+					<li>Ahmad Ahmadi</li>
+					<li>Ahyana Rizky Pratama</li>
+					<li>Aji Lantang Mardika</li>
+					<li>Andrew Tandiawan</li>
+					<li>Ari Adiprana</li>
+					<li>Elkana Lumbantobing</li>
+					<li>Fadhli Ramadhani Arislan</li>
+				</ul>
+			</div>
+			<div class="col3">
+				<ul>
+					<li>Fansyah Faturahman</li>
+					<li>Imam Nugraha</li>
+					<li>Ismanuri</li>
+					<li>Ivan Gerard</li>
+					<li>Kun Anggiar Lanang Dwi Laksono</li>
+					<li>Lilianti Wibiesono</li>
+				</ul>
+			</div>
+			<div class="col3">
+				<ul>
+					<li>Peter Raswono</li>
+					<li>Ryan Andhaka</li>
+					<li>Sahbana Lubis</li>
+					<li>Septhianto Diga Chandra</li>
+					<li>Tevin</li>
+					<li>Toni Chen</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var all = [].slice.call(document.querySelectorAll('li'));
+	all.forEach(function addEvent (list) {
+		list.setAttribute("titalic",true);
+		list.setAttribute("tbold",true);
+		list.addEventListener("click",function makeItalic() {
+			this.className = "italic";
+		});
+		list.addEventListener("contextmenu",function makeBold(e) {			
+			this.className = "bold";					
+			e.preventDefault();
+			e.stopPropagation();
+		});
+	})
+	</script>
+</body>
+</html>

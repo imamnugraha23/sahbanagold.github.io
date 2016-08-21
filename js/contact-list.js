@@ -1,4 +1,4 @@
-var daftarKontak = [];
+var daftarKontak = [ ];
 
 function tambahKontak (nama, email, telepon) {
 	var kontak = {

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="membuat text berwarna - warni">
+	<meta name="keyword" content="text berwarna">
+	<meta name="author" content="Sahbana">
+	<link rel="stylesheet" type="text/css" href="../styles/index.css" >
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+	<title> membuat text berwarna - warni pelangi</title>
+</head>
+<body>
+	<div>
+		<h1 class="rainbow">
+			Why does <span>"</span><span>C</span><span>O</span><span>L</span><span>O</span><span>R</span><span>S</span><span>"</span> so beautiful like a <br>
+			<span>Rainbow</span>
+			<div><h4 id="form-output"></h4>
+			</div>
+			<form>
+				<input type="text" id="rb-input" name="rainbow-input" placeholder="masukkan text untuk dijadikan warna-warni"><br>
+				<button id="rb-submit">Warnai</button>
+				<button id="rb-clear">Hapus</button>
+			</form>		
+		<img src="../images/rainbow.png" width="80%"  alt="Rainbow" style="margin: 0 auto 0; z-index:-1;">
+		</h1>
+	</div>
+	<script type="text/javascript">
+		var bt= document.getElementById('rb-submit');
+		var hr = document.getElementsByTagName('h1')[0];
+		console.log(hr);
+		hr.addEventListener('mouseleave',function(){
+			hr.className ='rainbow';
+		},false);
+		hr.addEventListener('mouseover',function(){
+			hr.className ='';
+		},false);
+		bt.addEventListener("click",function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			warnai();
+		},false); 	
+		function warnai () {			
+			var rd=document.getElementById('form-output'); 
+			var id=document.getElementById('rb-input').value;
+			id = id + "</span>";
+			it = id.split(" ");			
+			it.splice(0,0,"<span class='rainbow'><span>");
+			if (it.length >9 ) {
+				it.splice(9,0,"</span><span class='rainbow'><span>");
+			};
+			rd.innerHTML = it.join(" </span><span> ");
+			
+			
+		}
+		
+	</script>
+</body>
+</html>
